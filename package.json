@@ -1,6 +1,6 @@
 {
   "name": "sqlite-esm",
-  "version": "3.41.2-build13",
+  "version": "3.41.2-build14",
   "description": "SQLite Wasm conveniently wrapped as an ES Module.",
   "keywords": [
     "sqlite",
@@ -32,12 +32,6 @@
     "sqlite-wasm": "bin/index.js"
   },
   "scripts": {
-    "prepare": "npm run build && npm run fix && npm run publint",
-    "publint": "npx publint",
-    "clean": "shx rm -rf sqlite-wasm",
-    "build": "npm run clean && node bin/index.js",
-    "start": "npx http-server --coop",
-    "fix": "npx prettier . --write",
     "deploy": "npm run prepare && git commit -am 'New release' && git push && npm publish --access public"
   },
   "repository": {
