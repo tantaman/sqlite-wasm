@@ -1,6 +1,6 @@
 {
   "name": "sqlite-esm",
-  "version": "3.41.2-build15",
+  "version": "3.42.0-build4",
   "description": "SQLite Wasm conveniently wrapped as an ES Module.",
   "keywords": [
     "sqlite",
@@ -16,12 +16,14 @@
   "main": "index.mjs",
   "type": "module",
   "files": [
+    "index.d.ts",
     "index.mjs",
     "sqlite-wasm/",
     "sqlite3.wasm"
   ],
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.mjs",
       "main": "./index.mjs",
       "browser": "./index.mjs"
@@ -32,11 +34,11 @@
     },
     "./package.json": "./package.json"
   },
+  "types": "./index.d.ts",
   "bin": {
     "sqlite-wasm": "bin/index.js"
   },
   "scripts": {
-    "deploy": "npm run prepare && git commit -am 'New release' && git push && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -55,7 +57,8 @@
     "module-workers-polyfill": "^0.3.2",
     "node-fetch": "^3.3.1",
     "prettier": "^2.8.8",
-    "publint": "^0.1.11",
-    "shx": "^0.3.4"
+    "publint": "^0.1.12",
+    "shx": "^0.3.4",
+    "typescript": "^5.1.3"
   }
 }
