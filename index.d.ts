@@ -1,4 +1,4 @@
-declare module '@sqlite.org/sqlite-esm' {
+declare module 'sqlite-esm' {
   type InitOptions = {
     print: (...msg: any[]) => void;
     printErr: (...msg: any[]) => void;
